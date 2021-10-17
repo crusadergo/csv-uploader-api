@@ -1,0 +1,2 @@
+class CsvStorage < ApplicationRecord
+end

@@ -6,6 +6,8 @@ ruby '3.0.2'
 gem 'graphql'
 gem 'pg'
 gem 'dotenv-rails'
+gem 'apollo_upload_server', '2.1.0'
+gem 'rack-cors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
@@ -36,6 +38,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'graphql-playground'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

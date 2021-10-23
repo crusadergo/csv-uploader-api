@@ -4,6 +4,6 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    field :csv_list, resolver: Queries::FetchCsvStorage
+    field :csvs, resolver: Queries::FetchCsvStorage
   end
 end

@@ -8,6 +8,7 @@ gem 'pg'
 gem 'dotenv-rails'
 gem 'apollo_upload_server', '2.1.0'
 gem 'rack-cors'
+gem 'carrierwave', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'

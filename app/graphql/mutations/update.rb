@@ -1,12 +1,18 @@
 module Mutations
-    class Upload < Mutations::BaseMutation
-        argument :params, Types::Input::CsvStorageInputType, required: true
+    class Update < Mutations::BaseMutation
+        argument :params, Types::Update::CsvStorageUpdateType, required: true
 
-        field :item, Types::CsvStorageType, null: false
+        # field :item, Types::CsvStorageType, null: false
 
         def resolve(params:)
+            csv_params = Hash(params)
+
             begin
-                item = CsvStorage.create!(csv_params)
+                item = CsvStorage.find(csv_params[:id])
+
+                return GraphQL::ExecutionError.new("Record not found!") unless item
+
+                item.update!(csv_params)
 
                 { item: {
                     filename: item.filename,

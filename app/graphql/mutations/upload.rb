@@ -5,6 +5,8 @@ module Mutations
         field :item, Types::CsvStorageType, null: false
 
         def resolve(params:)
+            csv_params = Hash(params)
+
             begin
                 item = CsvStorage.create!(csv_params)
 

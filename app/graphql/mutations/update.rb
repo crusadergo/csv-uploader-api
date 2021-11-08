@@ -2,7 +2,7 @@ module Mutations
     class Update < Mutations::BaseMutation
         argument :params, Types::Update::CsvStorageUpdateType, required: true
 
-        # field :item, Types::CsvStorageType, null: false
+        field :item, Types::CsvStorageType, null: false
 
         def resolve(params:)
             csv_params = Hash(params)

@@ -5,5 +5,7 @@ module Types
     field :updateCsv, mutation: Mutations::Update
 
     field :destroyCsv, mutation: Mutations::Destroy
+
+    field :createUser, mutation: Mutations::CreateUser
   end
 end

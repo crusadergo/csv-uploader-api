@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 .env
+/public/upoads/*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

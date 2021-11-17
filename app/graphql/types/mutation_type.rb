@@ -7,5 +7,7 @@ module Types
     field :destroyCsv, mutation: Mutations::Destroy
 
     field :createUser, mutation: Mutations::CreateUser
+
+    field :signinUser, mutation: Mutations::SignInUser
   end
 end

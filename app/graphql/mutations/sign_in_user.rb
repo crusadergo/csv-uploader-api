@@ -22,7 +22,7 @@ module Mutations
                 { user: {
                     id: user.id,
                     login: user.login
-                } }
+                }, token: token }
             rescue ActiveRecord::RecordInvalid => e
                 GraphQL::ExecutionError.new("Invalid attributes for #{e.record.class}:"\
                 " #{e.record.errors.full_messages.join(', ')}")
